@@ -12,9 +12,9 @@ public class Main {
 
         List<Pyramid> pyramids = pDAO.readPyramidFromCSV();
 
-        //int i = 0;
+        int i = 0;
         for(Pyramid p:pyramids) {
-            System.out.println("#" +  p );
+            System.out.println("#" + i++ +". " +  p );
         }
 
 

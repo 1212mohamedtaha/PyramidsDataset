@@ -36,8 +36,16 @@ public class PyramidCSVDAO {
             for (int field = 0; field< fields.length; field ++){  //Reading field by field
                 fields[field] = fields[field].trim();
             }
-            Pyramid pyramid = new Pyramid(fields[2],fields[0],fields[4],fields[7]);
-            this.pyramidInfo.add(pyramid);
+            try{
+            double x = Double.parseDouble(fields[7]);
+                Pyramid pyramid = new Pyramid(fields[2],fields[0],fields[4],x);
+                this.pyramidInfo.add(pyramid);}
+            catch(Exception e) {
+                double x = 0;
+                Pyramid pyramid = new Pyramid(fields[2],fields[0],fields[4],x);
+                this.pyramidInfo.add(pyramid);
+            }
+
         }
         return pyramidInfo;
         }

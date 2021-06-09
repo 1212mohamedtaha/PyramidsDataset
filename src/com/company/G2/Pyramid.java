@@ -1,13 +1,13 @@
 package com.company.G2;
 
 public class Pyramid {
-    private String height;
+    private double height;
     private String modern_name;
     private String pharaoh;
     private String site;
 
     public Pyramid(String modern_name
-            ,String pharaoh,String site,String height){
+            ,String pharaoh,String site,double height){
         try {
             this.height = height;
         } catch (Exception e) {
@@ -33,11 +33,11 @@ public class Pyramid {
 
 
 
-    public String getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(String height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
